@@ -3,10 +3,13 @@
 
 #Вариант 8. Объявите функцию, которая вычисляет площадь круга и возвращает вычисленное значение.
 #В качестве аргумента ей передается значение радиуса.
+
+
 def decorator(func):
     def decorator1(x):
+        c = "Площадь круга"
         ret = func(x)
-        print('Площадь круга равна')
+        print(f'{c} = {ret}')
         return ret
     return decorator1
 
@@ -17,7 +20,6 @@ def add(x):
     return x * x * pi
 
 
-r = float(input("Введите значение радиуса:"))
-print("=", round(add(r), 2))
-
-
+if __name__ == "__main__":
+    r = float(input("Введите значение радиуса:"))
+    add(r)
